@@ -6,7 +6,7 @@ import irods.access
 import irods.collection
 import irods.exception
 import irods.session
-
+from irods.exception import CAT_INVALID_USER
 
 class Permissions():
     """Irods permissions operations."""
@@ -14,7 +14,7 @@ class Permissions():
     def __init__(self, session, item) -> None:
         """Initialize the permissions object.
 
-        Parameters
+        Parameter
         ----------
         session
             Session that contains the item.
@@ -65,4 +65,7 @@ class Permissions():
             raise ValueError("Cannot set your own permissions, because you would lose "
                              "access to the object/collection.")
         acl = irods.access.iRODSAccess(perm, self.item.path, user, zone)
-        self.session.irods_session.acls.set(acl, recursive=recursive, admin=admin)
+        try:
+            self.session.irods_session.acls.set(acl, recursive=recursive, admin=admin)
+        except CAT_INVALID_USER as error:
+            raise ValueError(f"Set permissions: Unknown user {user}#{zone}") from error
