@@ -6,7 +6,7 @@
 Welcome to the iBridges documentation!
 ======================================
 
-`iBridges <https://github.com/UtrechtUniversity/iBridges>`__ is a Python library to connect to iRods servers in a simplified and safe manner.
+`iBridges <https://github.com/UtrechtUniversity/iBridges>`__ is a Python library to connect to iRODS servers in a simplified and safe manner.
 
 .. admonition:: Warning
 
@@ -14,9 +14,9 @@ Welcome to the iBridges documentation!
    broken or not implemented yet. We appreciate help, issues and bug report in our issue tracker on `github <https://github.com/UtrechtUniversity/iBridges>`__.
 
 
-iBridges is a wrapper around the `python-irodsclient <https://github.com/irods/python-irodsclient>`__. While the
-python-irodsclient is very powerful and feature rich, we aim to provide an easier API for users (mainly researchers)
-that do not have any technical knowledge of iRods.
+iBridges is a wrapper around the `python-iRODSclient <https://github.com/iRODS/python-iRODSclient>`__. While the
+python-irodsclient is very powerful and feature-rich, we aim to provide an easier API for users (mainly researchers and scientific programmers)
+who do not have any technical knowledge of iRODS.
 
 .. toctree::
    :hidden:
