@@ -53,8 +53,9 @@ perform your data operations, and then delete/close the session. To create a new
 .. code:: python
 
     from ibridges import Session
+    from pathlib import Path
 
-    session = Session(iRODS_env_path="~/.iRODS/iRODS_environment.json", password="mypassword")
+    session = Session(iRODS_env=Path("~/.iRODS/iRODS_environment.json").expanduser(), password="mypassword")
 
 
 Upload data
