@@ -24,6 +24,7 @@ who do not have any technical knowledge of iRODS.
    :caption: Contents:
 
    quickstart
+   beginners-guide
    faq
    api
 
