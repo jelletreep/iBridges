@@ -32,15 +32,15 @@ by pull requests. You can also ask for new features/ideas in our issue tracker.
 ---------------
 We provide a quickstart tutorial and in-depth tutorials which also explain hwo iRODS helps in Research Data Management.
 
-[**Quickstart**](https://github.com/UtrechtUniversity/iBridges/blob/main/tutorials/QuickStart.ipynb)
+`Quickstart <https://github.com/UtrechtUniversity/iBridges/blob/main/tutorials/QuickStart.ipynb>`_
 
-[**All available Tutorials**](https://github.com/UtrechtUniversity/iBridges/blob/main/tutorials)
+`All available Tutorials <https://github.com/UtrechtUniversity/iBridges/blob/main/tutorials>`_
 
 **How do I have to setup my laptop to connect to my iRODS/Yoda server**
 ----------------------------------
 Setting up an iRODS client can be difficult. 
 We provide a tutorial, which configuration file is expected where on your laptop and how the configuration should look like:
 
-[**Set up configuration**](https://github.com/UtrechtUniversity/iBridges/blob/main/tutorials/QuickStart.ipynb)
+`Set up configuration <https://github.com/UtrechtUniversity/iBridges/blob/main/tutorials/QuickStart.ipynb>`_
 
 
