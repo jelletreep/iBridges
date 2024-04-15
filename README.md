@@ -3,7 +3,8 @@
 [![](https://github.com/UtrechtUniversity/iBridges/actions/workflows/integration-tests-irods.yml/badge.svg?branch=develop)](https://github.com/UtrechtUniversity/iBridges/actions/workflows/integration-tests-irods.yml) [![](https://github.com/UtrechtUniversity/iBridges/actions/workflows/main.yml/badge.svg?branch=develop)](https://github.com/UtrechtUniversity/iBridges/actions/workflows/main.yml) 
 [![](https://github.com/UtrechtUniversity/iBridges/actions/workflows/integration-tests-yoda.yml/badge.svg)](https://github.com/UtrechtUniversity/iBridges/actions/workflows/integration-tests-yoda.yml) ![](https://readthedocs.org/projects/ibridges/badge/?version=latest&style=flat-default)
 
-iBridges is library for scientific programmers who are working with data in iRODS. We provide a wrapper around the [python-irodsclient](https://pypi.org/project/python-irodsclient/) to facilitate easy interaction with the iRODS server. iBridges is currently still in very active development.
+iBridges is a library for scientific programmers who are working with data in [iRODS](https://irods.org/). We provide a wrapper around the [python-irodsclient](https://pypi.org/project/python-irodsclient/) to facilitate easy interaction with iRODS. iBridges is currently still in very active development.
+
 
 ## Highlights
 
@@ -35,7 +36,7 @@ iBridges is library for scientific programmers who are working with data in iROD
 
 ## Installation
 
-There are two main ways to install iBridges. The recommended way is to use the stable version that is available on PyPi:
+iBridges is installed using `pip`([get started with pip](https://pip.pypa.io/en/stable/getting-started/)). The recommended way is to use the stable version that is available on PyPi:
 
 ```bash
 pip install ibridges
@@ -54,16 +55,15 @@ Below are some basic examples of the features in iBridges.
 ```py
 # Create an iRODS session
 from ibridges import Session
-from pathlib import Path
 
-session = Session(irods_env=Path("~/.irods/irods_environment.json").expanduser(), password="mypassword")
+session = Session(irods_env_path="~/.irods/irods_environment.json", password="mypassword")
 
-# Upload data
+# Upload files or directories
 from ibridges import upload
 
 upload(session, "/your/local/path", "/irods/path")
 
-# Download data
+# Download files or directories/collections
 from ibridges import download
 
 download(session, "/irods/path", "/other/local/path")
@@ -76,14 +76,14 @@ download(session, "/irods/path", "/other/local/path")
 
 ### Guides
 - [QuickStart](tutorials/QuickStart.ipynb)
-- [iRODS Paths](tutorials/iRODS_paths.ipynb)
+- [Working with iRODS Paths](tutorials/iRODS_paths.ipynb)
 - [Data synchronisation](tutorials/Data_sync.ipynb)
 
 ### Beginners tutorials
-- [Setup client configuration](tutorials/01-Setup-and-connect.ipynb)
+- [Setup and connect to iRODS](tutorials/01-Setup-and-connect.ipynb)
 - [Working with data](tutorials/02-Working-with-data.ipynb)
-- [iRODS and local Paths](tutorials/03-iRODS-Paths.ipynb)
-- [Metadata](tutorials/04-Metadata.ipynb)
+- [Introduction to iRODS and local Paths](tutorials/03-iRODS-Paths.ipynb)
+- [Working with Metadata](tutorials/04-Metadata.ipynb)
 - [Sharing data](tutorials/05-Data-Sharing.ipynb)
 
 ## Authors
